@@ -157,9 +157,25 @@ footer {
 }
 
 .second{
- flex: 0.30;
+ flex: 0.70;
 }
 
 .image{
-  width: 10px;
+  align-items: center;
+  float:rig;
+}
+
+.imageone{
+  float:right 
+  display flex;
+justify-content: center
+  
+}
+
+.image{
+  float:right;
+  padding-top: 10px;
+  padding-bottom:10px;
+  padding:10px;
+  margin-left:70px;
 }
