@@ -55,7 +55,6 @@ p, li {
 /* || header layout */
 
 .header {
-  margin-bottom: 20px;
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   flex-flow: row wrap;
@@ -88,21 +87,20 @@ nav {
   display: flex;
 }
 
-.nav ul {
-  padding: 0;
+ul {
   list-style-type: none;
-  flex: 2;
+  flex: 1;
   display: flex;
+  padding: 0;
+
 }
 
-.nav li {
-  background-color: rgba(10, 255, 0, 0.5);
+li {
   display: inline;
   text-align: center;
-  padding-top: 20px;  
-  flex:2;
-  padding-bottom: 20px;
+  flex:1;
 }
+
 
 nav a, nav span {
   display: inline-block;
@@ -127,9 +125,8 @@ article, section {
 
 aside {
   flex: 1;
-  margin-left: 60px;
+  margin-left: 10px;
   padding: 1%;
-  font-style: italic;
   font-size: 40px;
 }
 
@@ -152,30 +149,10 @@ footer {
   
 }
 
-.first{
- flex: 1;
+.head{
+  margin-bottom: 10px;
+}
+#favstyle{
+  font-family: 'Roboto Condensed';
 }
 
-.second{
- flex: 0.70;
-}
-
-.image{
-  align-items: center;
-  float:rig;
-}
-
-.imageone{
-  float:right 
-  display flex;
-justify-content: center
-  
-}
-
-.image{
-  float:right;
-  padding-top: 10px;
-  padding-bottom:10px;
-  padding:10px;
-  margin-left:70px;
-}
