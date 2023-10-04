@@ -16,7 +16,7 @@
 
       html {
         font-family: 'Open Sans', sans-serif;
-        background: url(pattern.png);
+        background: url(background.png);
       }
 
       body {
@@ -107,14 +107,14 @@
       <h1>Mozilla</h1>
       <!-- <img> element, link to the small
           version of the Firefox logo -->
-      <img src="Images/firefoxlogo.png" alt="Firefox logo">
+      <img src="firefoxlogo.png" alt="Firefox logo">
 
     </header>
 
     <main>
       <article>
-        <!-- insert iframe from youtube -->
-        <iframe width="400px" height="200px" src= "https://www.youtube.com/embed/ojcNcvb1olg" frameborder="o"> </iframe>         
+        <!-- iframe from youtube -->
+        <iframe with="400px" height="200px" src= "https://www.youtube.com/embed/ojcNcvb1olg" frameborder="o"> </iframe>         
         
         <h2>Rocking the free web</h2>
         <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
@@ -131,22 +131,30 @@
         </a>
 
         <a href="https://www.mozilla.org/">
-          <img>
+          <img  srcset="mozilladinosaur.png 120w,mozilladinosaurlrg.png 400w"                                                
+          sizes="(max-width: 500px) 120px, 400px"
+          src="mozilladinosaurlrg.png" alt="Mozilla Dinosaur" > 
+    </img>
         </a>
+
         <a href="https://addons.mozilla.org/">
-          <img>
+           <img  srcset="firefoxaddons.jpg 120w,firefoxaddonslrg.jpg 400w"                                                
+                  sizes="(max-width: 500px) 120px, 400px"
+                  src="firefoxaddonslrg.jpg" alt="Firefox Addons" > 
+            </img>
         </a>
+        
         <a href="https://developer.mozilla.org/en-US/">
-          <img>
+          <img src="maphead.svg" alt="Resourses for Developers">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
-        <!-- insert picture element -->
+        <!-- picture element -->
         <picture>
           <source media="(max-width: 600px)" srcset="redpanda.jpg">
-          <img src="Images/redpandalandscape.jpg" alt="A Red Panda">
+          <img src="redpandalandscape.jpg" alt="A Red Panda">
       </picture>
       </div>
 
