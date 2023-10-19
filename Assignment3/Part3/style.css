@@ -43,3 +43,106 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+faceof-font {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+h1,h2 {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size:5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.3rem;
+}
+
+section h2 + p {
+  text-indent: 20px;
+}
+
+a [href*="http"] {
+  padding-right: 20px;
+  background: url(external-link-52.png) no-repeat 100% 0;
+  background-color: 16px 16px;
+}
+
+a:link, a:visited {
+  color: #16af3c 
+}
+
+a:focus, :hover {
+  text-decoration: none;
+}
+p, li {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  word-spacing: 3px;
+}
+
+a {
+  outline: none;
+}
+
+a:active {
+  columns: rgb(17, 93, 163);
+  text-shadow: 0px 0px 2px rgb(110, 6, 6),
+               0px 0px 3px rgb(110, 6, 6),
+               0px 0px 4px black,
+               0px 0px 5px black;
+}
+
+ul,ol {
+  margin: 1.5rem 0;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: lower-latin;
+}
+
+nav ul {
+  padding-left: 0;
+  margin-bottom: 0.7rem;
+}
+
+nav li {
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+nav li a {
+  text-decoration: none;
+  display: inline-block;
+  width:100%;
+  line-height: 3;
+  text-align: center;
+  font-size: 2.2rem;
+  border: 0.8px solid rgb(12, 4, 77)
+}
+
+nav li a:focus, nav li a:hover {
+  color: white;
+  background: rgb(12, 4, 77);
+}
+
+nav li a:active {
+  color: white;
+  background: black;
+}
