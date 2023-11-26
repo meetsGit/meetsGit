@@ -3,7 +3,7 @@
 // Date: 4th October 2023
 // Description: This is my main.js which will change the look of the webpage
 
-// set up canvas
+// Sets up the canvas
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -13,15 +13,17 @@ const p_tag = document.getElementById('count');
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 
-// function to generate random number
+// Generates random number.
 
-function random(min, max) {
+function random(min, max) 
+{
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// function to generate random RGB color value
+// Generates RGB number value
 
-function randomRGB() {
+function randomRGB() 
+{
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
@@ -29,9 +31,11 @@ function randomRGB() {
 let collisions = 25;
 
 
-class Ball {
+class Ball 
+{
 
-   constructor(x, y, velX, velY, color, size, exists = true) {
+   constructor(x, y, velX, velY, color, size, exists = true) 
+   {
       this.x = x;
       this.y = y;
       this.velX = velX;
@@ -42,27 +46,33 @@ class Ball {
 
    }
 
-   draw() {
+   draw() 
+   {
       ctx.beginPath();
       ctx.fillStyle = this.color;
       ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
       ctx.fill();
    }
 
-   update() {
-      if ((this.x + this.size) >= width) {
+   update() 
+   {
+      if ((this.x + this.size) >= width) 
+      {
          this.velX = -(Math.abs(this.velX));
       }
 
-      if ((this.x - this.size) <= 0) {
+      if ((this.x - this.size) <= 0) 
+      {
          this.velX = Math.abs(this.velX);
       }
 
-      if ((this.y + this.size) >= height) {
+      if ((this.y + this.size) >= height) 
+      {
          this.velY = -(Math.abs(this.velY));
       }
 
-      if ((this.y - this.size) <= 0) {
+      if ((this.y - this.size) <= 0) 
+      {
          this.velY = Math.abs(this.velY);
       }
 
@@ -70,14 +80,18 @@ class Ball {
       this.y += this.velY;
    }
 
-   collisionDetect() {
-      for (const ball of balls) {
-         if (!(this === ball) && ball.exists) {
+   collisionDetect() 
+   {
+      for (const ball of balls) 
+      {
+         if (!(this === ball) && ball.exists) 
+         {
             const dx = this.x - ball.x;
             const dy = this.y - ball.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < this.size + ball.size) {
+            if (distance < this.size + ball.size) 
+            {
               ball.color = this.color = randomRGB();
               collisions = collisions - 1;
               p_tag.textContent = "Ball Count: " + collisions;
@@ -90,8 +104,10 @@ class Ball {
 }
 
 
-window.addEventListener("keydown", (e) => {
-   switch (e.key) {
+window.addEventListener("keydown", (e) => 
+{
+   switch (e.key) 
+   {
      case "a":
        this.x -= this.velX;
        break;
